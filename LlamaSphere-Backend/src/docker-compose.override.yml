@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  userdb:
+    container_name: userdb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=UserDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_user:/var/lib/postgresql/data
+
+  projectdb:
+    container_name: projectdb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=UserDb
+    restart: always
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_project:/var/lib/postgresql/data

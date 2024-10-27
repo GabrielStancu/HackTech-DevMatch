@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  userdb:
+    image: postgres
+  projectdb:
+    image: postgres
+
+volumes:
+  postgres_user:
+  postgres_project:

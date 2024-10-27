@@ -1,0 +1,102 @@
+<div class="dashboard-container">
+  <!-- Existing content of your dashboard -->
+  <h2 class="dashboard-heading">Welcome to Your Dashboard</h2>
+  <!-- Other dashboard elements -->
+
+  <!-- FAQ Button and Chat Window -->
+  <div class="faq-chat-container">
+    <!-- The FAQ Button -->
+    <button class="faq-button" (mouseenter)="showChat()" (mouseleave)="scheduleHideChat()">
+      <!-- You can use an icon or text -->
+      <img src="assets/faq-icon.svg" alt="FAQ">
+    </button>
+
+    <!-- The Chat Window -->
+    <div
+      class="chat-window"
+      [class.visible]="isChatVisible"
+      (mouseenter)="showChat()"
+      (mouseleave)="scheduleHideChat()"
+    >
+      <div class="chat-header">
+        <h3>FAQ Chat</h3>
+      </div>
+      <div class="chat-body">
+        <div *ngFor="let msg of chatMessages" [ngClass]="{'user-message': msg.sender === 'user', 'bot-message': msg.sender === 'bot'}">
+          <p>{{ msg.message }}</p>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input
+          type="text"
+          [(ngModel)]="userQuestion"
+          placeholder="Type your question..."
+          (keydown.enter)="sendQuestion()"
+        >
+        <button (click)="sendQuestion()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button to get matching jobs -->
+  <button mat-raised-button color="primary" class="matching-jobs-button" (click)="onGetAllJobs()">
+      Find Matching Jobs
+  </button>
+
+  <!-- Loading Indicator -->
+  <div *ngIf="loadingJobs" class="loading-indicator">
+      <p>Loading matching jobs...</p>
+      <div class="spinner"></div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorLoadingJobs" class="error-message">
+      <p>{{ errorLoadingJobs }}</p>
+  </div>
+
+    
+  <!-- Display the jobs in a table -->
+  <div *ngIf="allJobs && allJobs.length > 0" class="jobs-table-container">
+      <h3>Your Matching Jobs:</h3>
+      <table mat-table [dataSource]="allJobs" class="mat-elevation-z8">
+  
+      <!-- Job Title Column -->
+      <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef> Job Title </th>
+          <td mat-cell *matCellDef="let job"> {{ job.title }} </td>
+      </ng-container>
+  
+      <!-- Score Column -->
+      <ng-container matColumnDef="score">
+          <th mat-header-cell *matHeaderCellDef> Match Score (%) </th>
+          <td mat-cell *matCellDef="let job"> {{ job.score }} </td>
+      </ng-container>
+  
+      <!-- Explanation Columns -->
+      <ng-container matColumnDef="domain_score">
+          <th mat-header-cell *matHeaderCellDef> Domain Score </th>
+          <td mat-cell *matCellDef="let job"> {{ job.domain_score }} </td>
+      </ng-container>
+      <ng-container matColumnDef="general_score">
+        <th mat-header-cell *matHeaderCellDef> General Score </th>
+        <td mat-cell *matCellDef="let job"> {{ job.general_score }} </td>
+      </ng-container>
+      <ng-container matColumnDef="tehnical_score">
+        <th mat-header-cell *matHeaderCellDef> Tehnical Score </th>
+        <td mat-cell *matCellDef="let job"> {{ job.tehnical_score }} </td>
+      </ng-container>
+  
+      <!-- Header and Row Declarations -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      </table>
+  </div>
+    
+  <!-- Message if no jobs are found -->
+  <div *ngIf="allJobs && allJobs.length === 0 && !loadingJobs">
+      <p>No matching jobs found at this time.</p>
+  </div>
+    
+
+</div>

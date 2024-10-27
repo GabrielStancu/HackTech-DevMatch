@@ -1,0 +1,73 @@
+/* Dialog Title Styling */
+.mat-dialog-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Dialog Content Styling */
+.mat-dialog-content {
+    margin-top: 16px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Form Field Styling */
+.message-input {
+    width: 100%;  /* Full width to fit the dialog */
+    margin-top: 12px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #f9f9f9;  /* Light background for input */
+    border-radius: 4px;
+}
+
+.mat-form-field-label {
+    color: #666; /* Label color */
+}
+
+textarea.mat-input-element {
+    padding: 12px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Dialog Actions Styling */
+.mat-dialog-actions {
+    margin-top: 20px;
+}
+
+/* Cancel Button Styling */
+button[mat-button] {
+    color: #555;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Send Button Styling */
+button[mat-raised-button] {
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button[mat-raised-button].mat-primary {
+    background-color: #066d66; /* Custom primary color */
+    color: white;
+}
+
+button[mat-raised-button].mat-primary:hover {
+    background-color: #066d66;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for Cancel button */
+button[mat-button]:hover {
+    background-color: #f0f0f0;
+}

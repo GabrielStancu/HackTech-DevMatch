@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Send Email</h2>
+<div mat-dialog-content>
+<mat-form-field appearance="fill" class="message-input">
+    <mat-label>Email Message</mat-label>
+    <textarea matInput [(ngModel)]="emailMessage" rows="5"></textarea>
+</mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+<button mat-button (click)="onCancel()">Cancel</button>
+<button mat-raised-button color="primary" (click)="onSend()">Send Email</button>
+</div>

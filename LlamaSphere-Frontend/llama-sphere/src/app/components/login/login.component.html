@@ -1,0 +1,32 @@
+<section>
+  <div class="imgBx">
+    <img src="./../../../assets/hero.jpg">
+  </div>
+  <div class="contentBx">
+    <div class="formBx">
+      <div class="header">
+        <img src="./../../../assets/llama_logo.png">
+        <div class="title">
+          <p class="p1">Llama </p><p class="p2">Sphere</p>
+        </div>
+        <h2>Login</h2>
+      </div>
+      <form>
+        <div class="inputBx">
+          <span>Username</span>
+          <input type="text" name="username" [(ngModel)]="loginUser.username">
+        </div>
+        <div class="inputBx">
+          <span>Password</span>
+          <input type="password" name="password" [(ngModel)]="loginUser.password">
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Log In" name="" (click)="onLoginClicked()">
+        </div>
+        <div class="inputBx register">
+          <p>No account? <a routerLink="/register">Sign Up</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

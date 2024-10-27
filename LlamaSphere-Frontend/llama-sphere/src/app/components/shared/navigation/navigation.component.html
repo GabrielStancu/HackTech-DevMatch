@@ -1,0 +1,19 @@
+<div class="navigation" [ngClass]="{active: collapsed}">
+  <div class="logo-wrapper">
+      <img src="./../../../../assets/llama_logo.png" class="logo"/>
+      <div>
+          <span class="logo-name first-word">Llama</span>
+          <span class="logo-name second-word">Sphere</span>
+      </div>
+  </div>
+
+  <ul>
+      <li (mouseover)="onOptionMouseOver(sidebarOption)" *ngFor="let sidebarOption of sidebarOptions"
+          [ngClass]="{hovered : sidebarOption.isActive}">
+          <a (click)="onOptionClick(sidebarOption)">
+            <span class="icon"><mat-icon>{{sidebarOption.iconName}}</mat-icon></span>
+            <span class="title">{{sidebarOption.title}}</span>
+          </a>
+      </li>
+  </ul>
+</div>

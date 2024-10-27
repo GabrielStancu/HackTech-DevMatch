@@ -1,0 +1,15 @@
+<div class="topbar">
+  <div class="toggle"(click)="toggleSidebar()">
+    <mat-icon>menu</mat-icon>
+  </div>
+  <div class="user-container" *ngIf="displayUser !== undefined">
+      <div class="user-greeting">
+          Hello, {{displayUser.firstName}}!
+      </div>
+      <!-- user image -->
+      <div class="user">
+          <img src="{{displayUser.profilePictureSrc}}"/>
+      </div>
+  </div>
+
+</div>

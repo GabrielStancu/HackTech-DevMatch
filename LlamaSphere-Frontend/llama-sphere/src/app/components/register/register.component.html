@@ -1,0 +1,62 @@
+<section>
+  <div class="imgBx">
+    <img src="./../../../assets/hero.jpg">
+  </div>
+  <div class="contentBx">
+    <div class="formBx">
+      <div class="header">
+        <img src="./../../../assets/llama_logo.png">
+        <div class="title">
+          <p class="p1">Llama</p><p class="p2">Sphere</p>
+        </div>
+        <h2>Register</h2>
+      </div>
+      <form>
+        <div class="inputBx">
+          <span>Username</span>
+          <input type="text" name="username" [(ngModel)]="registerUser.username">
+        </div>
+        <div class="inputBx">
+          <span>Password</span>
+          <input type="password" name="password" [(ngModel)]="registerUser.password">
+        </div>
+        <div class="inputBx">
+          <span>Repeat Password</span>
+          <input type="password" name="repeatPassword" [(ngModel)]="registerUser.repeatedPassword">
+        </div>
+        <div class="inputBx">
+          <span>First Name</span>
+          <input type="text" name="firstName" [(ngModel)]="registerUser.firstName">
+        </div>
+        <div class="inputBx">
+          <span>Last Name</span>
+          <input type="text" name="lastName" [(ngModel)]="registerUser.lastName">
+        </div>
+        <!-- <div>
+          <span>Birthday</span>
+          <mat-form-field appearance="fill">
+              <input matInput [matDatepicker]="picker" name="bithday" [(ngModel)]="registerUser.birthday">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div> -->
+        <div class="inputBx">
+            <span>User Type</span>
+            <mat-form-field appearance="fill">
+              <mat-select name="userType" [(ngModel)]="registerUser.userType">
+                <mat-option *ngFor="let userType of userTypes" [value]="userType.value">
+                  {{userType.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Sign Up" name="" (click)="onRegisterClicked()">
+        </div>
+        <div class="inputBx register">
+          <a routerLink="/login">Go Back</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

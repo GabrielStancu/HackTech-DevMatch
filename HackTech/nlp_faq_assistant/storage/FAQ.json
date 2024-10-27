@@ -1,0 +1,52 @@
+{
+  "FAQ": [
+    {
+      "question": "How do I sign up as a recruiter or developer?",
+      "answer": "To sign up, click on the 'Sign Up' button on the homepage. You will be prompted to select either 'Recruiter' or 'Developer' before completing the registration form with your personal details."
+    },
+    {
+      "question": "What should I do if I forget my password?",
+      "answer": "If you forget your password, click on 'Forgot Password' on the login page. You will receive an email with instructions to reset your password."
+    },
+    {
+      "question": "As a recruiter, how can I post a new job?",
+      "answer": "To post a job, log in as a recruiter and go to your dashboard. Under 'Jobs,' click 'Add New Job' and fill out the job description. You can upload a job file or select from existing job templates within your company."
+    },
+    {
+      "question": "How does the job-candidate matching work?",
+      "answer": "Our system uses a matching algorithm that compares candidate profiles with job requirements, including skills and experience. Matched candidates are shown under each job listing in the recruiter's dashboard."
+    },
+    {
+      "question": "Can I view only jobs that match my profile as a developer?",
+      "answer": "Yes. In the developer dashboard, you can view job listings that match your profile under the 'Matching Jobs' section. This list is updated based on your skills and experience."
+    },
+    {
+      "question": "How do recruiters filter candidates for specific skills or experience?",
+      "answer": "Recruiters can use the filter options in the 'Candidates' section to narrow down results based on specific skills, years of experience, and location."
+    },
+    {
+      "question": "Can developers update their profile information after registration?",
+      "answer": "Yes, developers can update their profiles anytime. Go to 'Profile' in the developer dashboard to edit your skills, experience, and upload a new CV if needed."
+    },
+    {
+      "question": "What file types are supported for job descriptions and CV uploads?",
+      "answer": "Our system supports PDF, DOCX, and TXT file types for job descriptions and CV uploads to ensure compatibility and ease of use."
+    },
+    {
+      "question": "How will I be notified about job matches?",
+      "answer": "When a job matches your profile, you will see it listed under 'Matching Jobs' in your developer dashboard. You may also receive an email notification if notifications are enabled."
+    },
+    {
+      "question": "How do recruiters contact matched candidates?",
+      "answer": "Once a candidate is matched to a job, the recruiter can view their profile and send a message or email directly through the platform."
+    },
+    {
+      "question": "Can I delete my account?",
+      "answer": "Yes. If you wish to delete your account, please go to 'Settings' and select 'Delete Account'. Note that this action is irreversible and will permanently remove all your data."
+    },
+    {
+      "question": "What security measures are in place to protect my information?",
+      "answer": "We use encryption and secure login methods to protect user information. All data is stored in secure servers, and access is restricted based on user roles."
+    }
+  ]
+}

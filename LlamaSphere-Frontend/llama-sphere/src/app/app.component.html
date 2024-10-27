@@ -1,0 +1,10 @@
+<div class="screen-container" *ngIf="showNavbars">
+  <app-navigation [collapsed]="collapsedSidebar"></app-navigation>
+  <div class="main" [ngClass]="{active: collapsedSidebar}">
+      <app-topbar (sidebarChanged)="onSidebarChanged($event)"></app-topbar>
+      <router-outlet></router-outlet>
+  </div>
+</div>
+<div *ngIf="!showNavbars">
+  <router-outlet></router-outlet>
+</div>

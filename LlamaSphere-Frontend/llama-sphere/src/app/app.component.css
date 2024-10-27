@@ -1,0 +1,64 @@
+.screen-container {
+  position: relative;
+  width: 100%;
+}
+
+/* main */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.content-container {
+  background: var(--flat-dark);
+  top: 0;
+}
+
+.wrapper {
+  background: var(--background);
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  padding-top: 30px;
+}
+
+/* responsiveness */
+@media (max-width: 991px) {
+  .main {
+      width: 100%;
+      left: 0;
+  }
+
+  .main.active {
+      left: 300px;
+  }
+
+  .graphBox {
+      grid-template-columns: 1fr;
+      height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+      grid-template-columns: repeat(1,1fr);
+  }
+}
+
+::ng-deep .mat-form-field-flex {
+  border-radius: 50px !important;
+  border: 1px solid var(--flat-dark) !important;
+  background: #fff !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
